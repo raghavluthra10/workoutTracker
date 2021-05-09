@@ -4,6 +4,7 @@ import Login from './Login';
 import SignUp from './SignUp';
 import Home from './Home';
 import Dashboard from './Dashboard';
+import Header from './Header';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Route path='/' exact> <Home  /> </Route>
         <Route path='/login' exact> <Login  /> </Route>
         <Route path='/signup' exact> <SignUp  /> </Route>
-        <Route path='/dashboard' exact> <Dashboard  /> </Route>
+        <Route path='/dashboard' exact> <Header  /> <Dashboard  /> </Route>
         
       </Switch>
     </div>
@@ -23,3 +24,7 @@ function App() {
 }
 
 export default App;
+
+
+// #1D1E1F
+// #141313

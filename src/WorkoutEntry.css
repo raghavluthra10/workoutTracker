@@ -1,0 +1,49 @@
+
+.workoutEntry__logs {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.workoutEntry__logs > span {
+    width: 100px;
+    text-align: center;
+}
+
+.workoutEntry__input {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.workoutEntry__input > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.workoutEntry__input > div > label {
+    text-align: center;
+}
+
+.workoutEntry__input > div > input {
+    width: 100px;
+}
+
+.workoutEntry__input > button {
+    width: 100px;
+}
+
+.workoutEntry__top {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.workoutEntry__excEntry {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.workoutEntry__excEntry > input {
+    width: 100px;
+}

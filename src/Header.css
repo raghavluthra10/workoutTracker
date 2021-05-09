@@ -1,0 +1,22 @@
+.header {
+    color: whitesmoke;
+    height: 60px;
+    background-color: #AF0303;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header > span {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.header__logoutBtn {
+    border: 1px solid whitesmoke !important;
+    font-size: 18px;
+    font-weight: 600 !important;
+    color: whitesmoke !important;
+}
