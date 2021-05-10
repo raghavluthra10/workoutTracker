@@ -1,0 +1,14 @@
+.setsEntry {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.setsEntry > span {
+    width: 100px;
+    text-align: center;
+}
+
+.setsEntry__logsBtn {
+    color: whitesmoke;
+}

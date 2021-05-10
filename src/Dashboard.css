@@ -35,12 +35,44 @@
 
 .dashboard__body {
     margin-top: 50px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid rgb(70, 70, 70);
+}
+
+.dashboard__bodyEntry > label {
+    font-size: 22px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.dashboard__bodyEntry > input {
+    background-color: #141313;
+    border: 1px solid rgb(122, 122, 122);
+    height: 30px;
+    border-radius: 5px;
+    color: whitesmoke;
 }
 
 .dashboard__bodyBtn {
     color: whitesmoke !important;
     border: 1px solid rgb(122, 122, 122) !important;
     
+}
+
+.datePicker {
+    position: absolute;
+    z-index: 90;
+    top: 190px;
+    left: 585px;
+    background-color: #141313;
+    border: 1px solid rgb(122, 122, 122);
+    height: fit-content;
+    width: 500px;
+    text-align: center;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-size: 18px
 }

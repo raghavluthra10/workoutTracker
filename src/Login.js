@@ -5,8 +5,8 @@ import Button from '@material-ui/core/Button';
 
 const Login = () => {
 
-    const login = () => {
-      
+    const login = (e) => {
+        e.preventDefault();
     }
 
     
