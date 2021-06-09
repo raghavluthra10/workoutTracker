@@ -14,7 +14,7 @@
 }
 
 .workoutEntry__input > div > input {
-    width: 100px;
+    width: 15vw;
     background-color: #141313;
     border: 1px solid rgb(122, 122, 122);
     height: 30px;

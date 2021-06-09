@@ -1,14 +1,25 @@
 .setsEntry {
     margin-top: 20px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
 .setsEntry > span {
-    width: 100px;
+    width: 15vw;
     text-align: center;
+}
+
+.setsEntry > div {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .setsEntry__logsBtn {
     color: whitesmoke;
+    width: 50%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 5px;
 }

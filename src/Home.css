@@ -1,0 +1,39 @@
+.home{
+    /* background-image: url('./images/workout.jpg'); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #1D1E1F;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.home nav {
+    background-color: #AF0303;
+    height: 60px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.home__loginBtn{
+    /* width: 100%; */
+    border: 1px solid white !important;
+    color: white !important;
+
+}
+
+.home > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.home > div > p {
+    margin-top: 50px;
+    text-align: center;
+}

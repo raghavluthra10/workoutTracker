@@ -1,4 +1,4 @@
-.dashboard {
+.cardio {
     background-color: #1D1E1F;
     min-height: 100vh;
     color: whitesmoke;
@@ -7,17 +7,17 @@
     padding-top: 50px;
 }
 
-.dashboard__topTop {
+.cardio__topTop {
     display: flex;
     justify-content: space-between;
 }
 
-.dashboard__topTop > div {
+.cardio__topTop > div {
     font-size: 1.1rem;
     font-weight: 600;
 }
 
-.dashboard__datePicker {
+.cardio__datePicker {
     background-color: #141313;
     display: flex;
     flex-direction: column;
@@ -26,14 +26,14 @@
 }
 
 
-.dashboard__top {
+.cardio__top {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     height: 80px;
 }
 
-.dashboard__body {
+.cardio__body {
     margin-top: 50px;
     padding-bottom: 30px;
     margin-bottom: 20px;
@@ -42,13 +42,13 @@
     border-bottom: 1px solid rgb(70, 70, 70);
 }
 
-.dashboard__bodyEntry > label {
+.cardio__bodyEntry > label {
     font-size: 22px;
     font-weight: 600;
     margin-right: 10px;
 }
 
-.dashboard__bodyEntry > input {
+.cardio__bodyEntry > input {
     background-color: #141313;
     border: 1px solid rgb(122, 122, 122);
     height: 30px;
@@ -56,7 +56,7 @@
     color: whitesmoke;
 }
 
-.dashboard__bodyBtn {
+.cardio__bodyBtn {
     color: whitesmoke !important;
     border: 1px solid rgb(122, 122, 122) !important;
 }

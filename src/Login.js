@@ -9,6 +9,10 @@ const Login = () => {
         e.preventDefault();
     }
 
+    const signUp = (e) => {
+       e.preventDefault(); 
+    };
+
     
     return (
         <div className='login'>
@@ -24,7 +28,13 @@ const Login = () => {
                 <label> Password: </label>
                 <input type='password' />
 
-                <Button variant='outlined' onClick={login} type='submit' > Login </Button>
+                <Button variant='outlined'  className='login__loginBtn' onClick={login} type='submit' > Login </Button>
+
+                    <div className='login__signUpInst'>
+                        New here? consider signing up
+                    </div>
+
+                <Button variant='outlined'  className='login__loginBtn' onClick={signUp} type='submit' > Sign up </Button>
             </form>
         </div>
     )
