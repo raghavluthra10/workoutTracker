@@ -6,17 +6,24 @@ import AddIcon from '@material-ui/icons/Add';
 import { IconButton } from '@material-ui/core';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import SetsEntry from './SetsEntry';
+import { useDispatch } from 'react-redux';
+import {  addWeightLogs } from './actions/index';
 
 const WorkoutEntry = ({ reps, sets, note, onClick, exercise }) => {
+    // const myState = useSelector((state) => state.weightTrainingSession);
+    const dispatch = useDispatch();
 
     const [ showLogs, setShowLogs ] = useState(false);
 
-    const editTrainingSession = () => {
+    // states for weight training
+    const [ weightReps, setWeightReps ] = useState('');
+    const [ weightSets, setWeightSets ] = useState('');
+    const [ weightNote, setWeightNote ] = useState('');
 
-    };
-
-    const deleteTrainingSession = () => {
-
+    const addWeightTrainingSession = (e) => {
+        e.preventDefault();
+        
+        dispatch(addWeightLogs(weightSets, weightReps, weightNote))
     };
 
     return (
@@ -35,31 +42,29 @@ const WorkoutEntry = ({ reps, sets, note, onClick, exercise }) => {
                     <form className='workoutEntry__input' >
                         <div>
                             <label> {sets} </label>
-                            <input type='number' />
+                            <input type='number' value={weightSets} onChange={(e) => setWeightSets(e.target.value)} />
                         </div>
                         
                         <div>
                             <label> {reps} </label>
-                            <input type='number' />
+                            <input type='number' value={weightReps} onChange={(e) =>setWeightReps(e.target.value)} />
                         </div>
                         
                         <div>
                             <label> {note} </label>
-                            <input type='text'  />
+                            <input type='text' value={weightNote} onChange={(e) => setWeightNote(e.target.value)} />
                         </div>
 
-                        <Button  variant='outlined' onClick={onClick} type='submit'>
+                        <Button  variant='outlined' onClick={addWeightTrainingSession} type='submit'>
                             <AddIcon  />
                         </Button>
                     </form>
 
-                    <SetsEntry 
-                        weightSet='1'
-                        weightReps='10'
-                        weightNote='Rpe 8'
-                        editSession={editTrainingSession}
-                        deleteSession={deleteTrainingSession}
-                    />
+                    {/* <SetsEntry 
+                        weightSet={weightSets}
+                        weightReps={weightReps}
+                        weightNote={weightNote}
+                    /> */}
 
                 </>
             )}

@@ -6,27 +6,35 @@ import "react-datepicker/dist/react-datepicker.css";
 import Calendar from 'react-calendar';
 import Header from './Header';
 import { useHistory } from 'react-router';
+import { useSelector, useDispatch } from 'react-redux';
+import { addWeightTrainingName, addWeightLogs } from './actions/index';
+// import { addWeightTraining, weightDate } from './reducers/weightTraining';
 
 
 const Dashboard = () => {
 
+    const myState = useSelector((state) => state.weightTrainingSession);
+
     const history = useHistory();
+    const dispatch = useDispatch();
 
     const [ showDate, setShowDate ] = useState(false);
     const [startDate, setStartDate] = useState(new Date());
 
+    const dayDate = `${startDate.getDate()} / ${startDate.getMonth() +1 } / ${startDate.getFullYear()}`
+
+    const [ exerciseInput, setExerciseInput ] = useState('');
 
     const addExercise = (e) => {
         e.preventDefault();
-    }
-
-    const addWeightTrainingSession = (e) => {
-        e.preventDefault();
+        dispatch(addWeightTrainingName(exerciseInput, dayDate));
+        setExerciseInput('');
     };
 
     const pushToCardioPage = () => {
         history.push('/cardio');
     };
+
 
     return (
         <>
@@ -42,7 +50,7 @@ const Dashboard = () => {
                             Raghav Luthra
                         </div>
                         <div className='dashboard__topDate'>
-                            {startDate.getDate()} / {startDate.getMonth() +1 } / {startDate.getFullYear()}
+                            {dayDate}
                         </div>
                     </div>
 
@@ -64,7 +72,7 @@ const Dashboard = () => {
                 <form className='dashboard__body'>
                     <div className='dashboard__bodyEntry'>
                         <label> Exercise : </label>
-                        <input type='text' />
+                        <input value={exerciseInput} onChange={e => setExerciseInput(e.target.value)} type='text' />
                     </div>
                     
                     <Button variant='outlined' onClick={addExercise} className='dashboard__bodyBtn' type='submit'  >
@@ -72,13 +80,15 @@ const Dashboard = () => {
                     </Button>
                 </form>
                 
-                <WorkoutEntry 
+                {myState.map((data) => (
+                    <WorkoutEntry 
                     reps='Reps'
                     sets='Sets'
                     note='Note'
-                    onClick={addWeightTrainingSession}
-                    exercise='Deadlift'
+                    exercise={data.exercise}
                 />
+                ))}
+                
 
             
             </div>
