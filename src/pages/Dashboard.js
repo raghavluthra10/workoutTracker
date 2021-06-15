@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './Dashboard.css';
-import WorkoutEntry from './WorkoutEntry';
+import WorkoutEntry from '../components/WorkoutEntry';
 import Button from '@material-ui/core/Button';
 import "react-datepicker/dist/react-datepicker.css";
 import Calendar from 'react-calendar';
-import Header from './Header';
+import Header from '../components/Header';
 import { useHistory } from 'react-router';
 import { useSelector, useDispatch } from 'react-redux';
-import { addWeightTrainingName, addWeightLogs } from './actions/index';
+// import { addWeightTrainingName, addWeightLogs } from '../actions/index';
 // import { addWeightTraining, weightDate } from './reducers/weightTraining';
 
 

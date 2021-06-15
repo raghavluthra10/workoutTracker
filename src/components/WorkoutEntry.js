@@ -7,7 +7,7 @@ import { IconButton } from '@material-ui/core';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import SetsEntry from './SetsEntry';
 import { useDispatch } from 'react-redux';
-import {  addWeightLogs } from './actions/index';
+import {  addWeightLogs } from '../actions/index';
 
 const WorkoutEntry = ({ reps, sets, note, onClick, exercise }) => {
     // const myState = useSelector((state) => state.weightTrainingSession);

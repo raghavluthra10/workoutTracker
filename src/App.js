@@ -1,10 +1,10 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Login from './Login';
-import Home from './Home';
-import Dashboard from './Dashboard';
-import Header from './Header';
-import Cardio from './Cardio';
+import Login from './pages/Login';
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
+import Header from './components/Header';
+import Cardio from './pages/Cardio';
 
 function App() {
   return (

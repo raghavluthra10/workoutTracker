@@ -2,8 +2,8 @@ import React,{ useState } from 'react';
 import Button from '@material-ui/core/Button';
 import Calendar from 'react-calendar';
 import './Cardio.css';
-import WorkoutEntry from './WorkoutEntry';
-import Header from './Header';
+import WorkoutEntry from '../components/WorkoutEntry';
+import Header from '../components/Header';
 import { useHistory } from 'react-router';
 
 
